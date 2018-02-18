@@ -1,0 +1,25 @@
+{
+  "particles":{
+    "number":{
+      "value":100
+    },
+    "color":{
+      "value": "#ff0031"
+    },
+    "opacity":{
+      "value":0.4
+    },
+    "size":{
+      "value": 5,
+      "anim":{
+        "enable": true
+      }
+    },
+    "shape":{
+      "stroke":{
+        "width": 1,
+        "color": "#dce2df"
+      }
+    }
+  }
+}

@@ -1,0 +1,153 @@
+.home-wrap
+  header
+    width: 135px
+    background-color: #fff
+    padding: 30px 0
+
+    .header-position
+      position: fixed
+      top: 30px
+      left: 0
+      bottom: 30px
+      width: 135px
+      display: flex
+      flex-direction: column
+      justify-content: space-between
+
+    .logo
+      max-width: 135px
+      color: transparent
+      height: 80px
+      padding: 0
+      margin: 0
+      z-index: 2
+      background:
+        image: url("../img/logo.svg")
+        repeat: no-repeat
+        position: center
+        size: contain
+
+    .site-nav
+      ul
+        list-style: none
+        margin: 20px 0
+        padding: 0 25px 0 0
+        text-align: right
+
+        li
+          margin-bottom: 10px
+
+          &:last-child
+            margin-bottom: 0
+
+          a
+            color: #000
+            font-weight: 700
+
+            &:hover
+              color: #ff0031
+
+    .email-link
+      display: block
+      text-align: right
+      padding-right: 25px
+      color: #000
+      font-weight: 700
+
+      &:hover
+        color: #ff0031
+
+    .mobile-nav-toggle
+      width: 50px
+      height: 50px
+      margin-right: 20px
+      display: none
+      align-items: center
+      cursor: pointer
+
+      span,
+      span::before,
+      span::after
+        content: ""
+        display: block
+        height: 2px
+        width: 100%
+        background-color: #111
+        position: relative
+        transition: all 300ms ease-in-out
+
+      span::before
+        top: 15px
+
+      span::after
+        bottom: 17px
+
+      &.is-open span
+        background: transparent
+
+      &.is-open span::before,
+      &.is-open span::after
+        transform-origin: center
+        transform: rotate(45deg)
+        top: 0
+
+      &.is-open span::before
+        transform: rotate(-45deg)
+
+  .mobile-nav
+    display: none
+    background: #fff
+    width: 100%
+    position: absolute
+    padding: 30px 0 20px
+    transform: translate(-100%)
+    transition: all ease-in-out 300ms !important
+    z-index: 1
+
+    ul
+      list-style: none
+      margin: 0
+      padding: 0
+
+    li
+      text-align: center
+      margin-bottom: 10px
+
+      a
+        color: #000
+        font-weight: 700
+
+        &:hover,
+        &:focus
+          color: #ff0031
+
+@media (max-width: 775px)
+  .home-wrap
+    header
+      width: auto
+      padding: 20px 0
+
+      .header-position
+        width: auto
+        position: relative
+        top: auto
+        bottom: auto
+        left: auto
+        flex-direction: row
+        align-items: center
+
+        .site-nav,
+        .email-link
+          display: none
+
+        .logo
+          height: 45px
+
+        .mobile-nav-toggle
+          display: flex
+          z-index: 2
+
+    .mobile-nav.is-open
+      display: block
+      transform: translateY(0%)
+      transition: all ease-in-out 300ms !important
